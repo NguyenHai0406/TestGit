@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class GitCountProject {
 	WebDriver driver; 
 
-    By divProject = By.cssSelector("div[class=\"width-full text-bold\"]");
+    By divProject = By.cssSelector("div[class='width-full text-bold']");
     List<WebElement> countProjects;
     
     public GitCountProject(WebDriver driver) {

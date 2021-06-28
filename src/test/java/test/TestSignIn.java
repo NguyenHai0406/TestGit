@@ -24,7 +24,7 @@ public class TestSignIn {
     WebDriverWait wait;
     
 	@BeforeTest
-	public void load() {
+	public void setup() {
 		ReadObject object = new ReadObject();
 		Properties allObjects = object.getObjectRepository();
 		
@@ -43,7 +43,7 @@ public class TestSignIn {
 	}
 	
 	@Test(priority = 0)
-	public void signIn() {		
+	public void shouldSignInSuccessfully() {		
         
         pageLogin = new GitLogin(driver);
         pageLogin.loginGit(username, password, wait);
@@ -55,14 +55,14 @@ public class TestSignIn {
     }
 	
 	@Test(priority = 1)
-	public void countProjects() {
+	public void shouldCountProjectsSuccessfully() {
 		pageCountProject = new GitCountProject(driver);
 		int expectedCount = pageCountProject.count(wait);
         Assert.assertTrue(expectedCount > 0);
 	}
 	
 	@AfterTest
-	public void closeBrowser() {
+	public void tearDown() {
 		//close google
         driver.quit();
 	}

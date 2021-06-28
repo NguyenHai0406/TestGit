@@ -7,13 +7,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class GitLogin {
 	WebDriver driver; 
 
-    By btnSignIn = By.cssSelector("a[class=\"HeaderMenu-link flex-shrink-0 no-underline\"]");
+    By btnSignIn = By.cssSelector("a[class='HeaderMenu-link flex-shrink-0 no-underline']");
 
     By passwordGit = By.id("password");
     
     By usernameGit = By.id("login_field");
 
-    By btnSubmit = By.cssSelector("input[class=\"btn btn-primary btn-block\"]");
+    By btnSubmit = By.cssSelector("input[class='btn btn-primary btn-block']");
     
     public GitLogin(WebDriver driver) {
     	this.driver = driver;
